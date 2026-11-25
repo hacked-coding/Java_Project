@@ -1,0 +1,12 @@
+{
+  "name": "CyberHoneypotIDS Web SOC",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Cyber Honeypot Web Dashboard",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "mkdir -p bin && javac -d bin src/com/honeypot/exception/*.java src/com/honeypot/model/*.java src/com/honeypot/io/*.java src/com/honeypot/network/*.java src/com/honeypot/app/*.java"
+}
